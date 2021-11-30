@@ -60,7 +60,7 @@ if timeout -s KILL 2m mount -t ext4 /dev/disk/by-label/containerfs ${MOUNTPOINT}
     # WARNING WARNING WARNING WARNING WARNING
     # if the tmpfs is not large enough odd hangs can occur and the ESX event log will
     # report the guest disabling the CPU
-    mount -t tmpfs -o size=${tsize}m tmpfs ${MOUNTPOINT}/.tether/
+    mount -t tmpfs -o size=500m tmpfs ${MOUNTPOINT}/.tether/
 
     # enable full system functionality in the container
     ln -s lib64 ${MOUNTPOINT}/.tether/lib
@@ -80,13 +80,13 @@ if timeout -s KILL 2m mount -t ext4 /dev/disk/by-label/containerfs ${MOUNTPOINT}
     ln -s tether ${MOUNTPOINT}/.tether/tether-debug
 
     echo 'tether tmpfs size before copying libraries: '
-    df -k ${MOUNTPOINT}/.tether
+    df -h
 
     install-iptables ${MOUNTPOINT}/.tether
     install-entropy ${MOUNTPOINT}/.tether
 
     echo 'tether tmpfs size after copying libraries: '
-    df -k ${MOUNTPOINT}/.tether
+    df -h
 
     # Create VIC chain
     iptables -N VIC
