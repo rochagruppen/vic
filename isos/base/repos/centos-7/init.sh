@@ -77,9 +77,9 @@ install-iptables () {
     # /lib64/xtables/libxt_standard.so
     # /lib64/xtables/libxt_state.so
 
-    cp -Ln /lib64/lib{sysfs*,m.*,m-*,gcc_s*,ip*tc*,xtables*,dl*,c.so*,c-*} $1/lib64/
+    cp -Ln /lib64/lib{sysfs*,m.*,m-*,gcc_s*,ip*tc*,xtables*,dl*,c.so*,c-*,nfnet*} $1/lib64/
     cp -a /lib64/xtables $1/lib64/
-    cp -Ln /lib64/lib{sysfs*,m.*,m-*,gcc_s*,ip*tc*,xtables*,dl*,c.so*,c-*} $1/usr/lib64/
+    cp -Ln /lib64/lib{sysfs*,m.*,m-*,gcc_s*,ip*tc*,xtables*,dl*,c.so*,c-*,nfnet*} $1/usr/lib64/
     cp -a /lib64/xtables $1/usr/lib64/
 
     # TODO: stop assuming bash - can we replace with:
