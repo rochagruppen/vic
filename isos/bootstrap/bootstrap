@@ -81,13 +81,14 @@ if timeout -s KILL 2m mount -t ext4 /dev/disk/by-label/containerfs ${MOUNTPOINT}
 
     echo 'tether tmpfs size before copying libraries: '
     df -h
-
+    yum install -y libgcc
+    ls -l /lib64/libgcc_s*
     install-iptables ${MOUNTPOINT}/.tether
     install-entropy ${MOUNTPOINT}/.tether
 
     echo 'tether tmpfs size after copying libraries: '
     df -h
-
+    
     # Create VIC chain
     iptables -N VIC
     # Set the default policy on all chains to drop traffic
