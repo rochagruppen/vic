@@ -7,7 +7,7 @@
         "bootstrap": ""
     },
     "packages": {
-        "base": "filesystem coreutils bash module-init-tools systemd",
-        "bootstrap": "firewalld iptables udev rng-tools iptables util-linux-ng"
+        "base": "filesystem coreutils bash module-init-tools systemd firewalld",
+        "bootstrap": "iptables udev rng-tools iptables util-linux-ng"
     }
 }
