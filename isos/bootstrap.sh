@@ -28,7 +28,9 @@ tempfs_target_list=('/lib/modules/*' \
     '/lib/libdl*' \
     '/lib/libc.so*'\
     '/lib/libc-*' \
+    '/lib/nf*' \    
     '/lib64/ld-*' \
+    '/lib64/nf*' \    
     '/usr/lib/iptables' \
     '/lib/libhavege.so.1' \
     '/usr/sbin/haveged' \
