@@ -4,6 +4,8 @@ set -x
 
 echo 1 > /proc/sys/net/ipv4/conf/all/arp_notify
 echo 1 > /proc/sys/net/ipv4/conf/default/arp_notify
+echo 'Tentando instalar nfnetlink'
+yum install -y firewalld
 
 # depending on kernel, some may already be loaded or built in
 # this appends to any defined in a "drivers" arayy via repo customizations
