@@ -8,6 +8,6 @@
     },
     "packages": {
         "base": "filesystem coreutils bash module-init-tools systemd",
-        "bootstrap": "iptables udev rng-tools iptables util-linux-ng"
+        "bootstrap": "firewalld iptables udev rng-tools iptables util-linux-ng"
     }
 }
