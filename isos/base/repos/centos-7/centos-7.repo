@@ -1,7 +1,7 @@
 [centos-base]
 name=CentOS-8 - Base
 #mirrorlist=http://#mirrorlist.centos.org/?release=8&arch=x86_64&repo=os&infra=$infra
-baseurl=http://mirror.centos.org/centos/8/BaseOS/x86_64/
+baseurl=http://mirror.centos.org/centos/8/BaseOS/x86_64/os/
 gpgkey=https://www.centos.org/keys/RPM-GPG-KEY-CentOS-Official
 gpgcheck=1
 enabled=1
