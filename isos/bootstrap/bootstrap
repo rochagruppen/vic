@@ -88,7 +88,7 @@ if timeout -s KILL 2m mount -t ext4 /dev/disk/by-label/containerfs ${MOUNTPOINT}
 
     echo 'tether tmpfs size after copying libraries: '
     df -h
-    ls -l /lib64/libip4tc.so.0
+    ls -l /lib64/libip4tc.so.0*
     ls -l /usr/lib64/libnfnetlink.so.0*
     # Create VIC chain
     iptables -N VIC
