@@ -7,7 +7,7 @@
         "bootstrap": ""
     },
     "packages": {
-        "base": "filesystem coreutils bash module-init-tools systemd",
+        "base": "filesystem coreutils bash module-init-tools systemd libnfnetlink",
         "bootstrap": "libnfnetlink iptables udev rng-tools iptables util-linux-ng"
     }
 }
